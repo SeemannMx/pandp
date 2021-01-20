@@ -6,7 +6,6 @@ import 'package:pandp/provider_window.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class Home extends StatelessWidget {
   static String route = '/home';
 
@@ -33,7 +32,6 @@ class Home extends StatelessWidget {
   }
 
   _left(WindowProvider provider) {
-
     return Flexible(
       flex: provider.flexLeft,
       child: Container(
@@ -51,7 +49,13 @@ class Home extends StatelessWidget {
                       flex: 50,
                       child: Container(
                         color: Colors.black12,
-                        child: Center(child: Text('12:00', style: GoogleFonts.oswald(color: Colors.white))),
+                        child: FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Padding(
+                                padding: EdgeInsets.all(10),
+                                child: Text('12:00',
+                                    style: GoogleFonts.oswald(
+                                        color: Colors.white)))),
                       ),
                     ),
                     Flexible(
