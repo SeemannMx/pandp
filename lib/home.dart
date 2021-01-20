@@ -4,6 +4,8 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:pandp/provider_window.dart';
 import 'package:provider/provider.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 class Home extends StatelessWidget {
   static String route = '/home';
@@ -11,24 +13,27 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // dev.log('enter', name: HomePage.route);
-    return Consumer<WindowProvider>(builder: (context, provider, child) {
-      provider.init(context);
-      return Container(
-        color: Colors.blueGrey,
-        height: provider.size.height,
-        width: provider.size.width,
-        child: Row(
-          children: [
-            _left(provider),
-            _line(context, provider),
-            _right(context, provider),
-          ],
-        ),
-      );
-    });
+    return Scaffold(
+      body: Consumer<WindowProvider>(builder: (context, provider, child) {
+        provider.init(context);
+        return Container(
+          color: Colors.blueGrey,
+          height: provider.size.height,
+          width: provider.size.width,
+          child: Row(
+            children: [
+              _left(provider),
+              _line(context, provider),
+              _right(context, provider),
+            ],
+          ),
+        );
+      }),
+    );
   }
 
   _left(WindowProvider provider) {
+
     return Flexible(
       flex: provider.flexLeft,
       child: Container(
@@ -42,9 +47,11 @@ class Home extends StatelessWidget {
                 child: Row(
                   children: [
                     Flexible(
+                      fit: FlexFit.tight,
                       flex: 50,
                       child: Container(
                         color: Colors.black12,
+                        child: Center(child: Text('12:00', style: GoogleFonts.oswald(color: Colors.white))),
                       ),
                     ),
                     Flexible(

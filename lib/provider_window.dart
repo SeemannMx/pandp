@@ -15,6 +15,8 @@ class WindowProvider extends ChangeNotifier {
   RenderBox _getBox;
   Offset _local;
 
+  String timeString = DateTime.now().toString();
+
   init(BuildContext context) {
     size = MediaQuery.of(context).size;
     sliderWidth = size.width * 0.0025;
