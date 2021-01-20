@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:pandp/provider_window.dart';
 import 'package:provider/provider.dart';
 
@@ -19,7 +21,7 @@ class Home extends StatelessWidget {
           children: [
             _left(provider),
             _line(context, provider),
-            _right(provider),
+            _right(context, provider),
           ],
         ),
       );
@@ -78,7 +80,7 @@ class Home extends StatelessWidget {
         ));
   }
 
-  _right(WindowProvider provider) {
+  _right(BuildContext context, WindowProvider provider) {
     return Flexible(
       flex: provider.flexRight,
       child: Container(
@@ -93,13 +95,23 @@ class Home extends StatelessWidget {
             ),
             Flexible(
               flex: 90,
-              child: Container(
-                color: Colors.grey,
-              ),
+              child: Container(color: Colors.grey, child: _story()),
             ),
           ],
         ),
       ),
     );
+  }
+
+  _story() {
+    return FutureBuilder(
+        future: rootBundle.loadString("assets/story.md"),
+        builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
+          return snapshot.hasData
+              ? Markdown(data: snapshot.data)
+              : Center(
+                  child: CircularProgressIndicator(),
+                );
+        });
   }
 }
