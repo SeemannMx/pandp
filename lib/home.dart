@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // dev.log('enter', name: HomePage.route);
-    return Consumer <WindowProvider> (builder: (context, provider, child) {
+    return Consumer<WindowProvider>(builder: (context, provider, child) {
       provider.init(context);
       return Container(
         color: Colors.blueGrey,
@@ -26,11 +26,43 @@ class Home extends StatelessWidget {
     });
   }
 
-  _left(WindowProvider provider){
+  _left(WindowProvider provider) {
     return Flexible(
       flex: provider.flexLeft,
       child: Container(
-        color: Colors.black87,
+        // color: Colors.black87,
+        child: Column(
+          children: [
+            Flexible(
+              flex: 20,
+              child: Container(
+                color: Colors.blueGrey,
+                child: Row(
+                  children: [
+                    Flexible(
+                      flex: 50,
+                      child: Container(
+                        color: Colors.black12,
+                      ),
+                    ),
+                    Flexible(
+                      flex: 50,
+                      child: Container(
+                        color: Colors.black45,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Flexible(
+              flex: 80,
+              child: Container(
+                color: Colors.black54,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -40,7 +72,8 @@ class Home extends StatelessWidget {
         onHorizontalDragUpdate: (DragUpdateDetails dragUpdate) =>
             provider.update(context, dragUpdate),
         child: MouseRegion(
-          child: Container(width: provider.sliderWidth, color: provider.dragContainerColor),
+          child: Container(
+              width: provider.sliderWidth, color: provider.dragContainerColor),
           onHover: (e) => provider.hover(),
         ));
   }
@@ -49,7 +82,23 @@ class Home extends StatelessWidget {
     return Flexible(
       flex: provider.flexRight,
       child: Container(
-        color: Colors.black87,
+        // color: Colors.black87,
+        child: Column(
+          children: [
+            Flexible(
+              flex: 10,
+              child: Container(
+                color: Colors.black12,
+              ),
+            ),
+            Flexible(
+              flex: 90,
+              child: Container(
+                color: Colors.grey,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
