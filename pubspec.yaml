@@ -27,4 +27,15 @@ flutter:
 
   assets:
     - assets/story.md
-    - assets/chart.png
+    - assets/img/chart.png
+    - assets/img/label_alpha.png
+    - assets/img/label_bravo.png
+    - assets/img/label_charly.png
+    - assets/img/wappen_neu_anfang.png
+    - assets/img/wappen_neu_farmland.png
+    - assets/img/wappen_nord_wall.png
+    - assets/img/wappen_rhin_hafen.png
+    - assets/img/wappen_siedlung.png
+    - assets/img/wappen_spezial_einheit.png
+    - assets/img/wappen_west_defense.png
+
