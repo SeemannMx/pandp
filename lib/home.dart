@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:pandp/provider/provider_clock.dart';
 import 'package:pandp/provider/provider_window.dart';
+import 'package:pandp/widgets/control.dart';
+import 'package:pandp/widgets/story.dart';
 import 'package:provider/provider.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'dart:developer' as dev;
 
 class Home extends StatelessWidget {
@@ -13,11 +11,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // dev.log('enter', name: HomePage.route);
-
-    /// Where to call
-    /// LiveClockProvider.dispose()
-
     return Scaffold(
       body: Consumer<WindowProvider>(builder: (context, windowProvider, child) {
         windowProvider.init(context);
@@ -46,47 +39,7 @@ class Home extends StatelessWidget {
           children: [
             Flexible(
               flex: 10,
-              child: Container(
-                color: Colors.blueGrey,
-                child: Row(
-                  children: [
-                    Flexible(
-                      flex: 50,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        color: Colors.black12,
-                        child: FittedBox(
-                            fit: BoxFit.fitWidth,
-                            child: Padding(
-                                padding: EdgeInsets.all(50),
-                                child:
-                                Consumer<LiveClockProvider>(builder: (context, clockProvider, child) {
-                                  clockProvider.run();
-                                  
-                                  return Text(clockProvider.timeString,
-                                      style: GoogleFonts.oswald(
-                                          color: Colors.white));
-                                })
-                            )),
-                      ),
-                    ),
-                    Flexible(
-                      flex: 50,
-                      fit: FlexFit.tight,
-                      child: Container(
-                        color: Colors.black45,
-                        child: FittedBox(
-                            fit: BoxFit.fitWidth,
-                            child: Padding(
-                                padding: EdgeInsets.all(50),
-                                child: Text('search',
-                                    style: GoogleFonts.oswald(
-                                        color: Colors.white))))
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              child: Control()
             ),
             Flexible(
               flex: 90,
@@ -106,7 +59,8 @@ class Home extends StatelessWidget {
             provider.update(context, dragUpdate),
         child: MouseRegion(
           child: Container(
-              width: provider.sliderWidth, color: provider.dragContainerColor),
+              width: provider.sliderWidth,
+              color: provider.dragContainerColor),
           onHover: (e) => provider.hover(),
         ));
   }
@@ -114,35 +68,8 @@ class Home extends StatelessWidget {
   _right(BuildContext context, WindowProvider provider) {
     return Flexible(
       flex: provider.flexRight,
-      child: Container(
-        // color: Colors.black87,
-        child: Column(
-          children: [
-            Flexible(
-              flex: 0,
-              child: Container(
-                color: Colors.black12,
-              ),
-            ),
-            Flexible(
-              flex: 100,
-              child: Container(color: Colors.grey, child: _story()),
-            ),
-          ],
-        ),
-      ),
+      child: Story()
     );
   }
-
-  _story() {
-    return FutureBuilder(
-        future: rootBundle.loadString("assets/story.md"),
-        builder: (BuildContext context, AsyncSnapshot<String> snapshot) {
-          return snapshot.hasData
-              ? Markdown(data: snapshot.data)
-              : Center(
-                  child: CircularProgressIndicator(),
-                );
-        });
-  }
 }
+

@@ -18,8 +18,11 @@ class WindowProvider extends ChangeNotifier {
 
   String timeString = DateTime.now().toString();
 
-  init(BuildContext context) {
+  WindowProvider(){
     dev.log('window', name: this.runtimeType.toString());
+  }
+
+  init(BuildContext context) {
     size = MediaQuery.of(context).size;
     sliderWidth = size.width * 0.0025;
   }
