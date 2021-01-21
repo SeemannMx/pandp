@@ -39,20 +39,20 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Flexible(
-              flex: 20,
+              flex: 10,
               child: Container(
                 color: Colors.blueGrey,
                 child: Row(
                   children: [
                     Flexible(
-                      fit: FlexFit.tight,
                       flex: 50,
+                      fit: FlexFit.tight,
                       child: Container(
                         color: Colors.black12,
                         child: FittedBox(
                             fit: BoxFit.fitWidth,
                             child: Padding(
-                                padding: EdgeInsets.all(10),
+                                padding: EdgeInsets.all(50),
                                 child: Text('12:00',
                                     style: GoogleFonts.oswald(
                                         color: Colors.white)))),
@@ -60,8 +60,16 @@ class Home extends StatelessWidget {
                     ),
                     Flexible(
                       flex: 50,
+                      fit: FlexFit.tight,
                       child: Container(
                         color: Colors.black45,
+                        child: FittedBox(
+                            fit: BoxFit.fitWidth,
+                            child: Padding(
+                                padding: EdgeInsets.all(50),
+                                child: Text('search',
+                                    style: GoogleFonts.oswald(
+                                        color: Colors.white))))
                       ),
                     ),
                   ],
@@ -69,7 +77,7 @@ class Home extends StatelessWidget {
               ),
             ),
             Flexible(
-              flex: 80,
+              flex: 90,
               child: Container(
                 color: Colors.black54,
               ),
@@ -99,13 +107,13 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Flexible(
-              flex: 10,
+              flex: 0,
               child: Container(
                 color: Colors.black12,
               ),
             ),
             Flexible(
-              flex: 90,
+              flex: 100,
               child: Container(color: Colors.grey, child: _story()),
             ),
           ],
