@@ -24,7 +24,7 @@ class WindowProvider extends ChangeNotifier {
 
   init(BuildContext context) {
     size = MediaQuery.of(context).size;
-    sliderWidth = size.width * 0.0025;
+    sliderWidth = size.width * 0.0035;
   }
 
   hover() {
