@@ -13,9 +13,10 @@ dependencies:
 
   cupertino_icons: ^1.0.0
   provider: ^4.3.3
-  mobx: ^1.2.1+4
   flutter_markdown: any
   google_fonts: ^1.1.1
+  flutter_mobx: ^1.1.0+2
+  mobx: ^1.2.1+4
 
 dev_dependencies:
   flutter_test:
