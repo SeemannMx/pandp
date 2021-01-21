@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pandp/provider/provider_window.dart';
+import 'package:pandp/widgets/chart.dart';
 import 'package:pandp/widgets/control.dart';
 import 'package:pandp/widgets/story.dart';
 import 'package:provider/provider.dart';
@@ -45,7 +46,7 @@ class Home extends StatelessWidget {
               flex: 90,
               child: Container(
                 color: Colors.black54,
-                child: image(),
+                child: Chart(),
               ),
             ),
           ],
@@ -54,27 +55,23 @@ class Home extends StatelessWidget {
     );
   }
 
-  _line(BuildContext context, WindowProvider provider) {
+  _line(BuildContext context, WindowProvider windowProvider) {
     return GestureDetector(
         onHorizontalDragUpdate: (DragUpdateDetails dragUpdate) =>
-            provider.update(context, dragUpdate),
+            windowProvider.update(context, dragUpdate),
         child: MouseRegion(
           child: Container(
-              width: provider.sliderWidth,
-              color: provider.dragContainerColor),
-          onHover: (e) => provider.hover(),
+              width: windowProvider.sliderWidth,
+              color: windowProvider.dragContainerColor),
+          onHover: (e) => windowProvider.hover(),
         ));
   }
 
-  _right(BuildContext context, WindowProvider provider) {
+  _right(BuildContext context, WindowProvider windowProvider) {
     return Flexible(
-      flex: provider.flexRight,
+      flex: windowProvider.flexRight,
       child: Story()
     );
-  }
-
-  image(){
-    return Center(child: Image(image: AssetImage('assets/chart.png')));
   }
 }
 

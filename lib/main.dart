@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pandp/home.dart';
 import 'package:pandp/provider/provider_clock.dart';
+import 'package:pandp/provider/provider_image.dart';
 import 'package:pandp/provider/provider_window.dart';
 
 import 'package:provider/provider.dart';
@@ -12,7 +13,8 @@ class PandP extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(providers: [
       ChangeNotifierProvider(create: (_) => WindowProvider()),
-      ChangeNotifierProvider(create: (_) => LiveClockProvider())
+      ChangeNotifierProvider(create: (_) => LiveClockProvider()),
+      ChangeNotifierProvider(create: (_) => CustomImageProvider()),
     ], child: MaterialApp(title: 'PandP', home: Home()));
   }
 }
