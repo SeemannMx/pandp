@@ -45,6 +45,7 @@ class Home extends StatelessWidget {
               flex: 90,
               child: Container(
                 color: Colors.black54,
+                child: image(),
               ),
             ),
           ],
@@ -70,6 +71,10 @@ class Home extends StatelessWidget {
       flex: provider.flexRight,
       child: Story()
     );
+  }
+
+  image(){
+    return Center(child: Image(image: AssetImage('assets/chart.png')));
   }
 }
 
