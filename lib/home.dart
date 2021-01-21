@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
+import 'package:pandp/provider/provider_clock.dart';
 import 'package:pandp/provider/provider_window.dart';
 import 'package:provider/provider.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -13,18 +14,22 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // dev.log('enter', name: HomePage.route);
+
+    /// Where to call
+    /// LiveClockProvider.dispose()
+
     return Scaffold(
-      body: Consumer<WindowProvider>(builder: (context, provider, child) {
-        provider.init(context);
+      body: Consumer<WindowProvider>(builder: (context, windowProvider, child) {
+        windowProvider.init(context);
         return Container(
           color: Colors.blueGrey,
-          height: provider.size.height,
-          width: provider.size.width,
+          height: windowProvider.size.height,
+          width: windowProvider.size.width,
           child: Row(
             children: [
-              _left(provider),
-              _line(context, provider),
-              _right(context, provider),
+              _left(windowProvider),
+              _line(context, windowProvider),
+              _right(context, windowProvider),
             ],
           ),
         );
@@ -32,9 +37,9 @@ class Home extends StatelessWidget {
     );
   }
 
-  _left(WindowProvider provider) {
+  _left(WindowProvider windowProvider) {
     return Flexible(
-      flex: provider.flexLeft,
+      flex: windowProvider.flexLeft,
       child: Container(
         // color: Colors.black87,
         child: Column(
@@ -54,9 +59,15 @@ class Home extends StatelessWidget {
                             fit: BoxFit.fitWidth,
                             child: Padding(
                                 padding: EdgeInsets.all(50),
-                                child: Text('12:00',
-                                    style: GoogleFonts.oswald(
-                                        color: Colors.white)))),
+                                child:
+                                Consumer<LiveClockProvider>(builder: (context, clockProvider, child) {
+                                  clockProvider.run();
+                                  
+                                  return Text(clockProvider.timeString,
+                                      style: GoogleFonts.oswald(
+                                          color: Colors.white));
+                                })
+                            )),
                       ),
                     ),
                     Flexible(

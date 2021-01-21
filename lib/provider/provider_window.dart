@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'dart:developer' as dev;
 
 class WindowProvider extends ChangeNotifier {
   Size size;
@@ -18,6 +19,7 @@ class WindowProvider extends ChangeNotifier {
   String timeString = DateTime.now().toString();
 
   init(BuildContext context) {
+    dev.log('window', name: this.runtimeType.toString());
     size = MediaQuery.of(context).size;
     sliderWidth = size.width * 0.0025;
   }
