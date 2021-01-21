@@ -18,7 +18,6 @@ class Story extends StatelessWidget {
                 Flexible(
                   flex: 10,
                   child: Container(
-                    // color: Colors.yellow,
                     child: IconButton(
                       color: Colors.pink,
                       icon: Icon(Icons.clear),
