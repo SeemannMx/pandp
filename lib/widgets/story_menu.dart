@@ -11,20 +11,20 @@ class StoryMenu extends StatelessWidget {
     return Column(
       children: [
         Flexible(
-          flex: 25,
+          flex: 15,
           child: Container(
             child: StoryInfo(),
           ),
         ),
         Flexible(
-          flex: 60,
+          flex: 55,
           child: Container(
             color: Colors.black45,
             child: LocationsGrid(),
           ),
         ),
         Flexible(
-          flex: 40,
+          flex: 30,
           child: Container(
             color: Colors.blue,
           ),

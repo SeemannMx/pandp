@@ -3,22 +3,11 @@ import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
 
 class CustomImageProvider extends ChangeNotifier {
-  var images = [];
-  var locations = [];
-  var widget;
+  List <Widget> images = [];
+  List <Widget> locations = [];
 
   CustomImageProvider() {
-    // _load();
     dev.log('load assets', name: this.runtimeType.toString());
-
-    _addChart();
-    _addLocations();
-
-    notifyListeners();
-
-  }
-
-  _load() {
     _addChart();
     _addLocations();
 
@@ -35,8 +24,12 @@ class CustomImageProvider extends ChangeNotifier {
       ..add(Image(image: AssetImage('assets/img/wappen_neu_anfang.png')))
       ..add(Image(image: AssetImage('assets/img/wappen_neu_farmland.png')))
       ..add(Image(image: AssetImage('assets/img/wappen_nord_wall.png')))
+      ..add(Image(image: AssetImage('assets/img/wappen_west_defense.png')))
       ..add(Image(image: AssetImage('assets/img/wappen_rhin_hafen.png')))
-      ..add(Image(image: AssetImage('assets/img/wappen_spezial_einheit.png')))
-      ..add(Image(image: AssetImage('assets/img/wappen_west_defense.png')));
+      ..add(Image(image: AssetImage('assets/img/wappen_spezial_einheit.png')));
   }
 }
+
+
+
+
