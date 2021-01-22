@@ -35,33 +35,37 @@ class PersonProvider extends ChangeNotifier {
     PERSON.values.forEach((p) {
       person.name = p;
       person.callback = null;
-      personas.add(_getButton(person));
+      personas.add(_getButton(person.name));
     });
   }
 
-  _getButton(Person person) {
+  _getButton(PERSON person) {
     return OutlineButton(
-        child: Text(person.name.toString().cutName()),
+        child: Text(person.toString().cutName()),
         hoverColor: Colors.teal,
-        onPressed: person.callback,
+        onPressed: () {_setCallback(person);},
     );
   }
 
-  _show(PERSON person) {
-    switch(person) {
+  _setCallback(PERSON personCallback) {
+    switch(personCallback) {
       case PERSON.HUGO: {
+        dev.log(personCallback.toString(), name: this.runtimeType.toString());
+        
 
         }
         break;
       case PERSON.VANESSA: {
-
+        dev.log(personCallback.toString(), name: this.runtimeType.toString());
       }
       break;
       case PERSON.GIOVANNI: {
-
+        dev.log(personCallback.toString(), name: this.runtimeType.toString());
       }
       break;
     }
+
+    notifyListeners();
   }
 }
 
