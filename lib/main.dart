@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pandp/home.dart';
 import 'package:pandp/provider/provider_clock.dart';
-import 'package:pandp/provider/provider_grid.dart';
 import 'package:pandp/provider/provider_image.dart';
+import 'package:pandp/provider/provider_person.dart';
 import 'package:pandp/provider/provider_widget.dart';
 import 'package:pandp/provider/provider_window.dart';
 

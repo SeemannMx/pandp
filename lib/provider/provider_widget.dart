@@ -2,15 +2,15 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pandp/provider/provider_person.dart';
+import 'package:pandp/widgets/dialog.dart';
 import 'dart:developer' as dev;
 
-import 'package:intl/intl.dart';
-import 'package:pandp/home.dart';
-import 'package:pandp/provider/provider_grid.dart';
 import 'package:pandp/widgets/personas.dart';
 import 'package:pandp/widgets/story.dart';
 import 'package:pandp/widgets/story_menu.dart';
 import 'package:provider/provider.dart';
+import 'package:pandp/extentions.dart';
 
 enum DISPLAY {
   MENU,
@@ -26,12 +26,14 @@ enum DISPLAY {
   SPEZIAL,
 
   // Personen
-  PERSON
+  PERSON,
+  DIALOG
 }
 
 class WidgetProvider extends ChangeNotifier {
 
   Widget widget = StoryMenu();
+  bool isDisplayed = false;
 
   show(DISPLAY type){
 
@@ -85,9 +87,11 @@ class WidgetProvider extends ChangeNotifier {
         widget = Personas();
       }
       break;
+      case DISPLAY.DIALOG: {
+        widget = CustomDialog();
+      }
+      break;
     }
-
-
     notifyListeners();
   }
 
