@@ -17,7 +17,7 @@ class LocationsGrid extends StatelessWidget {
         children: [
           OutlineButton(
             child: Provider.of<CustomImageProvider>(context).locations[0],
-            hoverColor: Colors.teal[600],
+            hoverColor: Colors.teal,
             onPressed: () {
               Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.SIEDLUNG);
             }
@@ -25,7 +25,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[1],
-              hoverColor: Colors.teal[600],
+              hoverColor: Colors.teal,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NEU_ANFANG);
               }
@@ -33,7 +33,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[2],
-              hoverColor: Colors.teal[600],
+              hoverColor: Colors.teal,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NEU_FARMLAND);
               }
@@ -41,7 +41,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[3],
-              hoverColor: Colors.teal[600],
+              hoverColor: Colors.teal,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NORD_WALL);
               }
@@ -49,7 +49,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[4],
-              hoverColor: Colors.teal[600],
+              hoverColor: Colors.teal,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.WEST_DEFENSE);
               }
@@ -57,7 +57,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[5],
-              hoverColor: Colors.teal[600],
+              hoverColor: Colors.teal,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.RHIN_HAFEN);
               }

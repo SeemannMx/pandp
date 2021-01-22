@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/provider/provider_image.dart';
 import 'package:pandp/widgets/location_grid.dart';
 import 'package:pandp/widgets/story_info.dart';
@@ -16,17 +17,36 @@ class StoryMenu extends StatelessWidget {
             child: StoryInfo(),
           ),
         ),
+
         Flexible(
-          flex: 55,
+          flex: 65,
           child: Container(
             color: Colors.black45,
             child: LocationsGrid(),
           ),
         ),
+
         Flexible(
-          flex: 30,
+          flex: 20,
+          fit: FlexFit.tight,
           child: Container(
-            color: Colors.blue,
+            width: double.maxFinite,
+            padding: EdgeInsets.symmetric(vertical: 10),
+            child: MaterialButton(
+              color: Colors.black45,
+              hoverColor: Colors.teal,
+              child: FittedBox(
+                  fit: BoxFit.fitWidth,
+                  child: Text('Personas',
+                      style: GoogleFonts.abel(
+                          color: Colors.white,
+                          fontSize: double.maxFinite
+                      )
+                  )),
+              onPressed: () {
+                // widgetProvider.show(DISPLAY.STORY);
+              },
+            ),
           ),
         ),
       ],

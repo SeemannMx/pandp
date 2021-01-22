@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/provider/provider_widget.dart';
 import 'package:pandp/provider/provider_window.dart';
 import 'package:pandp/widgets/chart.dart';
 import 'package:pandp/widgets/control.dart';
-import 'package:pandp/widgets/story.dart';
-import 'package:pandp/widgets/story_info.dart';
 import 'package:provider/provider.dart';
 import 'dart:developer' as dev;
 
