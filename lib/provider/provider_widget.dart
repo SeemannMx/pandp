@@ -21,6 +21,9 @@ enum DISPLAY {
   WEST_DEFENSE,
   RHIN_HAFEN,
   SPEZIAL,
+
+  // Personen
+  PERSON
 }
 
 class WidgetProvider extends ChangeNotifier {
@@ -71,6 +74,11 @@ class WidgetProvider extends ChangeNotifier {
       break;
 
       case DISPLAY.SPEZIAL: {
+        widget = _test();
+      }
+      break;
+
+      case DISPLAY.PERSON: {
         widget = _test();
       }
       break;
