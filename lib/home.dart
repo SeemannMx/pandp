@@ -24,9 +24,9 @@ class Home extends StatelessWidget {
           width: windowProvider.size.width,
           child: Row(
             children: [
-              _left(windowProvider),
-              _line(context, windowProvider),
-              _right(context, windowProvider),
+              _left(context),
+              _line(context),
+              _right(context),
             ],
           ),
         );
@@ -34,9 +34,9 @@ class Home extends StatelessWidget {
     );
   }
 
-  _left(WindowProvider windowProvider) {
+  _left(BuildContext context) {
     return Flexible(
-      flex: windowProvider.flexLeft,
+      flex: Provider.of<WindowProvider>(context).flexLeft,
       child: Container(
         // color: Colors.black87,
         child: Column(
@@ -58,7 +58,9 @@ class Home extends StatelessWidget {
     );
   }
 
-  _line(BuildContext context, WindowProvider windowProvider) {
+  _line(BuildContext context) {
+    WindowProvider windowProvider = Provider.of<WindowProvider>(context);
+
     return GestureDetector(
         onHorizontalDragUpdate: (DragUpdateDetails dragUpdate) =>
             windowProvider.update(context, dragUpdate),
@@ -70,9 +72,9 @@ class Home extends StatelessWidget {
         ));
   }
 
-  _right(BuildContext context, WindowProvider windowProvider) {
+  _right(BuildContext context) {
     return Flexible(
-        flex: windowProvider.flexRight,
+        flex: Provider.of<WindowProvider>(context).flexRight,
         child: Provider.of<WidgetProvider>(context).widget,
     );
   }
