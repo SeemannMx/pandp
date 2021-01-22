@@ -19,7 +19,7 @@ class WindowProvider extends ChangeNotifier {
   String timeString = DateTime.now().toString();
 
   init(BuildContext context) {
-    dev.log('init window size', name: this.runtimeType.toString());
+    // dev.log('init window size', name: this.runtimeType.toString());
     size = MediaQuery.of(context).size;
     sliderWidth = size.width * 0.0035;
   }
@@ -35,7 +35,7 @@ class WindowProvider extends ChangeNotifier {
   }
 
   update(BuildContext context, DragUpdateDetails update) {
-    dev.log('update window size', name: this.runtimeType.toString());
+    // dev.log('update window size', name: this.runtimeType.toString());
     _getBox = context.findRenderObject();
     _local = _getBox.globalToLocal(update.globalPosition);
 

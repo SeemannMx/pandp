@@ -6,8 +6,11 @@ import 'dart:developer' as dev;
 
 import 'package:intl/intl.dart';
 import 'package:pandp/home.dart';
+import 'package:pandp/provider/provider_grid.dart';
+import 'package:pandp/widgets/personas.dart';
 import 'package:pandp/widgets/story.dart';
 import 'package:pandp/widgets/story_menu.dart';
+import 'package:provider/provider.dart';
 
 enum DISPLAY {
   MENU,
@@ -79,7 +82,7 @@ class WidgetProvider extends ChangeNotifier {
       break;
 
       case DISPLAY.PERSON: {
-        widget = _test();
+        widget = Personas();
       }
       break;
     }
@@ -112,3 +115,4 @@ class WidgetProvider extends ChangeNotifier {
     );
   }
 }
+
