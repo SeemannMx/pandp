@@ -31,7 +31,7 @@ class Personas extends StatelessWidget {
                 crossAxisSpacing: 10,
                 mainAxisSpacing: 10,
                 crossAxisCount: 5,
-                children: Provider.of<GridProvider>(context, listen: false).personas,
+                children: Provider.of<PersonProvider>(context, listen: false).personas,
               )
           ),
         ),
@@ -39,3 +39,4 @@ class Personas extends StatelessWidget {
     );
   }
 }
+

@@ -18,7 +18,7 @@ class PandP extends StatelessWidget {
       ChangeNotifierProvider(create: (_) => LiveClockProvider()),
       ChangeNotifierProvider(create: (_) => CustomImageProvider()),
       ChangeNotifierProvider(create: (_) => WidgetProvider()),
-      ChangeNotifierProvider(create: (_) => GridProvider()),
+      ChangeNotifierProvider(create: (_) => PersonProvider()),
     ], child: MaterialApp(title: 'PandP', home: Home()));
   }
 }

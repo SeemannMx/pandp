@@ -87,6 +87,7 @@ class WidgetProvider extends ChangeNotifier {
       break;
     }
 
+
     notifyListeners();
   }
 
