@@ -5,6 +5,7 @@ import 'dart:developer' as dev;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/model/person.dart';
 import 'package:pandp/provider/provider_widget.dart';
+import 'package:pandp/widgets/dialog.dart';
 import 'package:pandp/widgets/person_tile.dart';
 import 'package:provider/provider.dart';
 import 'package:pandp/extentions.dart';
@@ -17,28 +18,22 @@ class PersonProvider extends ChangeNotifier {
   Person person;
 
   initPersons(BuildContext context) {
-    if (personas.isEmpty) {
-      personas.clear();
-      personas
-        ..add(CustomPersonTile(
-            person: _createPerson(PERSON.HUGO, () {
-              _personsDialog(context);
-            })))
-        ..add(CustomPersonTile(
-            person: _createPerson(PERSON.VANESSA, () {
-              _personsDialog(context);
-            })))
-        ..add(CustomPersonTile(
-            person: _createPerson(PERSON.GIOVANNI, () {
-              _personsDialog(context);
-            })));
-      dev.log('new init', name: this.runtimeType.toString());
-    } else {
-      dev.log('list is NOT empty', name: this.runtimeType.toString());
-    }
+    if (personas.isNotEmpty) return;
 
-    dev.log(personas.length.toString() ,
-        name: this.runtimeType.toString());
+    personas.clear();
+    personas
+      ..add(CustomPersonTile(
+          person: _createPerson(PERSON.HUGO, () {
+        _personsDialog(context);
+      })))
+      ..add(CustomPersonTile(
+          person: _createPerson(PERSON.VANESSA, () {
+        _personsDialog(context);
+      })))
+      ..add(CustomPersonTile(
+          person: _createPerson(PERSON.GIOVANNI, () {
+        _personsDialog(context);
+      })));
   }
 
   Person _createPerson(PERSON name, VoidCallback callback) {
@@ -49,7 +44,12 @@ class PersonProvider extends ChangeNotifier {
   }
 
   _personsDialog(BuildContext context) {
-    dev.log('person clicked ${person.name.toString()}',
-        name: this.runtimeType.toString());
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) {
+        return CustomDialog();
+      },
+    );
   }
 }

@@ -87,10 +87,6 @@ class WidgetProvider extends ChangeNotifier {
         widget = Personas();
       }
       break;
-      case DISPLAY.DIALOG: {
-        widget = CustomDialog();
-      }
-      break;
     }
     notifyListeners();
   }

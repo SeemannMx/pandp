@@ -32,7 +32,7 @@ class _CustomPersonTileState extends State<CustomPersonTile> {
             widget.person;
         widget.person.callback();
 
-        showDialog(context: context, builder: (_) => CustomDialog());
+        // showDialog(context: context, builder: (_) => CustomDialog());
       },
     );
   }
