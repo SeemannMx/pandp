@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:pandp/model/person.dart';
 import 'package:pandp/provider/provider_person.dart';
 import 'package:pandp/widgets/dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:pandp/extentions.dart';
 
 class CustomPersonTile extends StatefulWidget {
-
   final Person person;
 
   CustomPersonTile({@required this.person});
@@ -16,26 +17,23 @@ class CustomPersonTile extends StatefulWidget {
 }
 
 class _CustomPersonTileState extends State<CustomPersonTile> {
-
   @override
   Widget build(BuildContext context) {
-
     return OutlineButton(
-      child: Text(widget.person.name.toString().cutName()),
+      child: FittedBox(
+          fit: BoxFit.fitWidth,
+          child: Text(widget.person.name.toString().cutName(), style: GoogleFonts.abel(
+              color: Colors.white,
+              fontSize: double.maxFinite
+          ),)),
       hoverColor: Colors.teal,
       onPressed: () {
+        Provider.of<PersonProvider>(context, listen: false).person =
+            widget.person;
         widget.person.callback();
 
-        showDialog(
-            context: context,
-            builder: (_) => CustomDialog()
-        );
+        showDialog(context: context, builder: (_) => CustomDialog());
       },
     );
   }
-}
-
-class Person {
-  PERSON name;
-  VoidCallback callback;
 }

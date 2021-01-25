@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pandp/provider/provider_person.dart';
 import 'package:pandp/provider/provider_widget.dart';
-import 'package:pandp/widgets/person.dart';
 import 'package:provider/provider.dart';
 
 class Personas extends StatelessWidget {

@@ -7,12 +7,11 @@ class CustomDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget widget = Placeholder();
 
     if (!Provider.of<WidgetProvider>(context, listen: false).isDisplayed) {
       Provider.of<WidgetProvider>(context, listen: false).isDisplayed = true;
 
-      widget = AlertDialog(
+      return AlertDialog(
         title: Text("Material Dialog"),
         content: Text("Hey! I'm Coflutter!"),
         actions: <Widget>[
@@ -28,9 +27,7 @@ class CustomDialog extends StatelessWidget {
       );
     } else {
       Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.PERSON);
-      widget = Provider.of<WidgetProvider>(context, listen: false).widget;
+      return Provider.of<WidgetProvider>(context, listen: false).widget;
     }
-
-    return widget;
   }
 }

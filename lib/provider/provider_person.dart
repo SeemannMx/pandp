@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
 
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pandp/model/person.dart';
 import 'package:pandp/provider/provider_widget.dart';
-import 'package:pandp/widgets/person.dart';
+import 'package:pandp/widgets/person_tile.dart';
 import 'package:provider/provider.dart';
 import 'package:pandp/extentions.dart';
 import 'dart:developer' as dev;
@@ -13,23 +14,42 @@ enum PERSON { HUGO, VANESSA, GIOVANNI }
 
 class PersonProvider extends ChangeNotifier {
   List<Widget> personas = [];
-  Widget _widget;
-
-  PERSON name;
-  VoidCallback callback;
+  Person person;
 
   initPersons(BuildContext context) {
-    personas.clear();
+    if (personas.isEmpty) {
+      personas.clear();
+      personas
+        ..add(CustomPersonTile(
+            person: _createPerson(PERSON.HUGO, () {
+              _personsDialog(context);
+            })))
+        ..add(CustomPersonTile(
+            person: _createPerson(PERSON.VANESSA, () {
+              _personsDialog(context);
+            })))
+        ..add(CustomPersonTile(
+            person: _createPerson(PERSON.GIOVANNI, () {
+              _personsDialog(context);
+            })));
+      dev.log('new init', name: this.runtimeType.toString());
+    } else {
+      dev.log('list is NOT empty', name: this.runtimeType.toString());
+    }
 
-    Person person = Person();
-    person..name = PERSON.HUGO..callback = () { _personsDialog(context); };
-    _widget = CustomPersonTile(person: person);
-    personas.add(_widget);
+    dev.log(personas.length.toString() ,
+        name: this.runtimeType.toString());
+  }
 
+  Person _createPerson(PERSON name, VoidCallback callback) {
+    person = Person();
+    return person
+      ..name = name
+      ..callback = callback;
   }
 
   _personsDialog(BuildContext context) {
-    dev.log('person clicked', name: this.runtimeType.toString());
-    // Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.DIALOG);
+    dev.log('person clicked ${person.name.toString()}',
+        name: this.runtimeType.toString());
   }
 }
