@@ -5,20 +5,26 @@ import 'package:pandp/widgets/dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:pandp/extentions.dart';
 
-class CustomPersonTile extends StatelessWidget {
+class CustomPersonTile extends StatefulWidget {
 
-  CustomPersonTile(this.name, this.callback);
+  final Person person;
 
-  PERSON name;
-  VoidCallback callback;
+  CustomPersonTile({@required this.person});
+
+  @override
+  _CustomPersonTileState createState() => _CustomPersonTileState();
+}
+
+class _CustomPersonTileState extends State<CustomPersonTile> {
 
   @override
   Widget build(BuildContext context) {
+
     return OutlineButton(
-      child: Text(name.toString().cutName()),
+      child: Text(widget.person.name.toString().cutName()),
       hoverColor: Colors.teal,
       onPressed: () {
-        callback();
+        widget.person.callback();
 
         showDialog(
             context: context,
@@ -29,5 +35,7 @@ class CustomPersonTile extends StatelessWidget {
   }
 }
 
-
-
+class Person {
+  PERSON name;
+  VoidCallback callback;
+}

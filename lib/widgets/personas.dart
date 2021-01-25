@@ -6,15 +6,10 @@ import 'package:pandp/widgets/person.dart';
 import 'package:provider/provider.dart';
 
 class Personas extends StatelessWidget {
-  List<Widget> personas = [];
-  Widget widget;
 
   @override
   Widget build(BuildContext context) {
-    widget = CustomPersonTile(PERSON.HUGO, () {
-      _hugo(context);
-    });
-    personas.add(widget);
+    Provider.of<PersonProvider>(context, listen: false).initPersons(context);
 
     return Column(
       children: [
@@ -40,15 +35,10 @@ class Personas extends StatelessWidget {
             crossAxisSpacing: 10,
             mainAxisSpacing: 10,
             crossAxisCount: 5,
-            children: personas,
+            children: Provider.of<PersonProvider>(context, listen: false).personas
           )),
         ),
       ],
     );
-  }
-
-  // Todo persopn actions
-  _hugo(BuildContext context) {
-    Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.DIALOG);
   }
 }
