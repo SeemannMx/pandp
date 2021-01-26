@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
 
-  cupertino_icons: ^1.0.0
+  enum_to_string: ^1.0.14
   provider: ^4.3.3
   flutter_markdown: any
   google_fonts: ^1.1.1
@@ -27,16 +27,5 @@ flutter:
 
   assets:
     - assets/story.md
-    - assets/story_person/story_hugo.md
-    - assets/img/chart.png
-    - assets/img/label_alpha.png
-    - assets/img/label_bravo.png
-    - assets/img/label_charly.png
-    - assets/img/wappen_neu_anfang.png
-    - assets/img/wappen_neu_farmland.png
-    - assets/img/wappen_nord_wall.png
-    - assets/img/wappen_rhin_hafen.png
-    - assets/img/wappen_siedlung.png
-    - assets/img/wappen_spezial_einheit.png
-    - assets/img/wappen_west_defense.png
-
+    - assets/story_person/
+    - assets/img/

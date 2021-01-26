@@ -12,9 +12,7 @@ class LiveClockProvider extends ChangeNotifier {
 
   run() {
     if (timer == null || !timer.isActive) {
-      dev.log('start live clock', name: this.runtimeType.toString());
       timeString = DateFormat('HH:mm').format(DateTime.now());
-
       timer = Timer.periodic(Duration(minutes: 1), (Timer t) {
         timeString = DateFormat('HH:mm').format(DateTime.now());
         notifyListeners();

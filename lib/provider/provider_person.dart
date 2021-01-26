@@ -2,20 +2,16 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
 
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/globals.dart';
 import 'package:pandp/model/person.dart';
-import 'package:pandp/provider/provider_widget.dart';
 import 'package:pandp/widgets/dialog.dart';
 import 'package:pandp/widgets/person_tile.dart';
-import 'package:provider/provider.dart';
 import 'package:pandp/extentions.dart';
-import 'dart:developer' as dev;
 
-enum PERSON { HUGO, VANESSA, GIOVANNI }
 
 class PersonProvider extends ChangeNotifier {
 
+  List <String> personNames = ['Hugo', 'Vanessa', 'Giovanni', 'Frederik'];
   List<Widget> personas = [];
   Person person;
   String assetsPath;
@@ -23,23 +19,18 @@ class PersonProvider extends ChangeNotifier {
   initPersons(BuildContext context) {
     if (personas.isNotEmpty) return;
 
-    personas.clear();
-    personas
-      ..add(CustomPersonTile(
-          person: _createPerson(PERSON.HUGO, () {
-        _personsDialog(context);
-      })))
-      ..add(CustomPersonTile(
-          person: _createPerson(PERSON.VANESSA, () {
-        _personsDialog(context);
-      })))
-      ..add(CustomPersonTile(
-          person: _createPerson(PERSON.GIOVANNI, () {
-        _personsDialog(context);
-      })));
+    personNames.forEach((name) {
+      dev.log(name.toString() , name: this.runtimeType.toString());
+      personas.add(
+          CustomPersonTile(
+              person: _createPerson(name, () {
+                _personsDialog(context);
+              }))
+      );
+    });
   }
 
-  Person _createPerson(PERSON name, VoidCallback callback) {
+  Person _createPerson(String name, VoidCallback callback) {
     person = Person();
     return person
       ..name = name

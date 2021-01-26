@@ -64,13 +64,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.5"
-  cupertino_icons:
+  enum_to_string:
     dependency: "direct main"
     description:
-      name: cupertino_icons
+      name: enum_to_string
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0"
+    version: "1.0.14"
   fake_async:
     dependency: transitive
     description:

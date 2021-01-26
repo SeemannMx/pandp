@@ -7,7 +7,6 @@ class CustomImageProvider extends ChangeNotifier {
   List <Widget> locations = [];
 
   CustomImageProvider() {
-    dev.log('load assets', name: this.runtimeType.toString());
     _addChart();
     _addLocations();
 
