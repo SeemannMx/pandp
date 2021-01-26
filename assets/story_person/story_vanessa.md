@@ -24,4 +24,4 @@ Schlüssel zu den privaten  Räumen, Kleine Axt, Mini Survival Kit
   
 .   
 ## Besonderheiten: 
-In Ihren Räumen befindet sich ein Safe mit allen Forschungsberichten und der Gründer Satzung. Im Safe befindet sich außerdem der Schlüssel zum Haupt-Labor und Zellen für Infizierte bzw. Imune.
+In Ihren Räumen befindet sich ein Safe mit allen Forschungsberichten und der Gründersatzung. Im Safe befindet sich außerdem der Schlüssel zum Haupt-Labor und Zellen für Infizierte bzw. Imune.

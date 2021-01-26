@@ -28,7 +28,7 @@ class CustomDialog extends StatelessWidget {
             if (snapshot.hasError) return Dummy();
 
             return Container(
-              height: size.height / 2,
+              height: size.height / 1.5,
               width: size.width / 2,
               child: (snapshot.hasData)
                   ? Markdown(data: snapshot.data)
