@@ -1,18 +1,18 @@
-[comment]: # (name)
+[comment]: # (Fransceco)
 ## Beschreibung: 
-
+Nachname unbekannt, Bootsbauer Meister
 
 .
 ### Merkmale:
-
+pending ...
 
 .
 ### Kleidung: 
-
+pending ...
 
 . 
 ### Gegenstände:
-	
+unbekannt
 
 .  
 ### Kampf
@@ -24,4 +24,4 @@
   
 .   
 ## Besonderheiten: 
-
+pending ...
