@@ -27,6 +27,7 @@ flutter:
 
   assets:
     - assets/story.md
+    - assets/story_person/story_hugo.md
     - assets/img/chart.png
     - assets/img/label_alpha.png
     - assets/img/label_bravo.png

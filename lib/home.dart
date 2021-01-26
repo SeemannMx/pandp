@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_widget.dart';
 import 'package:pandp/provider/provider_window.dart';
 import 'package:pandp/widgets/chart.dart';
@@ -13,6 +14,7 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: SCAFFOLD_KEY,
       body: Consumer<WindowProvider>(builder: (context, windowProvider, child) {
         windowProvider.init(context);
         return Container(

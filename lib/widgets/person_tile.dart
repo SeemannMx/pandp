@@ -3,7 +3,6 @@ import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/model/person.dart';
 import 'package:pandp/provider/provider_person.dart';
-import 'package:pandp/widgets/dialog.dart';
 import 'package:provider/provider.dart';
 import 'package:pandp/extentions.dart';
 
@@ -28,11 +27,8 @@ class _CustomPersonTileState extends State<CustomPersonTile> {
           ),)),
       hoverColor: Colors.teal,
       onPressed: () {
-        Provider.of<PersonProvider>(context, listen: false).person =
-            widget.person;
+        Provider.of<PersonProvider>(context, listen: false).person = widget.person;
         widget.person.callback();
-
-        // showDialog(context: context, builder: (_) => CustomDialog());
       },
     );
   }
