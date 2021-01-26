@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pandp/provider/provider_person.dart';
 import 'package:pandp/widgets/dialog.dart';
+import 'package:pandp/widgets/location.dart';
 import 'dart:developer' as dev;
 
 import 'package:pandp/widgets/personas.dart';
@@ -49,7 +50,7 @@ class WidgetProvider extends ChangeNotifier {
       break;
 
       case DISPLAY.SIEDLUNG: {
-        widget = _test();
+        widget = Location();
       }
       break;
 

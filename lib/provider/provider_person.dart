@@ -62,3 +62,4 @@ class PersonProvider extends ChangeNotifier {
     assetsPath = "assets/story_person/story_$personName.md";
   }
 }
+

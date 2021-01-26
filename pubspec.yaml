@@ -27,5 +27,6 @@ flutter:
 
   assets:
     - assets/story.md
+    - assets/dummy.md
     - assets/story_person/
     - assets/img/
