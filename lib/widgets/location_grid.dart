@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_image.dart';
 import 'package:pandp/provider/provider_widget.dart';
 import 'package:provider/provider.dart';
@@ -15,9 +16,11 @@ class LocationsGrid extends StatelessWidget {
         mainAxisSpacing: 10,
         crossAxisCount: 3,
         children: [
+
+          // todo refactoring
           OutlineButton(
             child: Provider.of<CustomImageProvider>(context).locations[0],
-            hoverColor: Colors.teal,
+            hoverColor: ACCENT_GREEN,
             onPressed: () {
               Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.SIEDLUNG);
             }
@@ -25,7 +28,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[1],
-              hoverColor: Colors.teal,
+              hoverColor: ACCENT_GREEN,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NEU_ANFANG);
               }
@@ -33,7 +36,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[2],
-              hoverColor: Colors.teal,
+              hoverColor: ACCENT_GREEN,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NEU_FARMLAND);
               }
@@ -41,7 +44,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[3],
-              hoverColor: Colors.teal,
+              hoverColor: ACCENT_GREEN,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NORD_WALL);
               }
@@ -49,7 +52,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[4],
-              hoverColor: Colors.teal,
+              hoverColor: ACCENT_GREEN,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.WEST_DEFENSE);
               }
@@ -57,7 +60,7 @@ class LocationsGrid extends StatelessWidget {
 
           OutlineButton(
               child: Provider.of<CustomImageProvider>(context).locations[5],
-              hoverColor: Colors.teal,
+              hoverColor: ACCENT_GREEN,
               onPressed: () {
                 Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.RHIN_HAFEN);
               }

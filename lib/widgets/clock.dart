@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_clock.dart';
 import 'package:provider/provider.dart';
 
@@ -19,8 +20,8 @@ class Clock extends StatelessWidget {
                 clockProvider.run();
 
                 return Text(clockProvider.timeString,
-                    style: GoogleFonts.oswald(
-                        color: Colors.white));
+                    style: GoogleFonts.abel(
+                        color: DIRTY));
               })
           )),
     );

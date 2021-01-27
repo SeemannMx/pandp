@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
+import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_person.dart';
 import 'package:pandp/provider/provider_widget.dart';
 import 'package:pandp/widgets/dummy.dart';
@@ -18,9 +19,8 @@ class CustomDialog extends StatelessWidget {
     var provider = Provider.of<PersonProvider>(context);
     provider.buildAssetsPathForPerson();
 
-    dev.log(provider.assetsPath, name: this.runtimeType.toString());
-
     return AlertDialog(
+      backgroundColor: LIGHT,
       title: Text(provider.person.name.toString().cutName()),
       content: FutureBuilder(
           future: rootBundle.loadString(provider.assetsPath),
@@ -36,12 +36,13 @@ class CustomDialog extends StatelessWidget {
             );
           }),
       actions: <Widget>[
-        FlatButton(
-          child: Text('close'),
+        IconButton(
+          color: ACCENT_RED,
+          icon: Icon(Icons.clear),
           onPressed: () {
             Navigator.of(context).pop();
           },
-        )
+        ),
       ],
     );
   }

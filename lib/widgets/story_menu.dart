@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_image.dart';
 import 'package:pandp/provider/provider_widget.dart';
 import 'package:pandp/widgets/location_grid.dart';
@@ -34,13 +35,13 @@ class StoryMenu extends StatelessWidget {
             width: double.maxFinite,
             padding: EdgeInsets.symmetric(vertical: 10),
             child: MaterialButton(
-              color: Colors.black45,
-              hoverColor: Colors.teal,
+              color: DARK,
+              hoverColor: ACCENT_GREEN,
               child: FittedBox(
                   fit: BoxFit.fitWidth,
                   child: Text('Personas',
                       style: GoogleFonts.abel(
-                          color: Colors.white,
+                          color: DIRTY,
                           fontSize: double.maxFinite
                       )
                   )),

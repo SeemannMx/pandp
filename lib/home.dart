@@ -15,10 +15,10 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: SCAFFOLD_KEY,
+      backgroundColor: LIGHT,
       body: Consumer<WindowProvider>(builder: (context, windowProvider, child) {
         windowProvider.init(context);
         return Container(
-          color: Colors.blueGrey,
           height: windowProvider.size.height,
           width: windowProvider.size.width,
           child: Row(
@@ -36,23 +36,17 @@ class Home extends StatelessWidget {
   _left(BuildContext context) {
     return Flexible(
       flex: Provider.of<WindowProvider>(context).flexLeft,
-      child: Container(
-        // color: Colors.black87,
-        child: Column(
-          children: [
-            Flexible(
-              flex: 10,
-              child: Control()
-            ),
-            Flexible(
-              flex: 90,
-              child: Container(
-                color: Colors.black54,
-                child: Chart(),
-              ),
-            ),
-          ],
-        ),
+      child: Column(
+        children: [
+          Flexible(
+            flex: 10,
+            child: Control()
+          ),
+          Flexible(
+            flex: 90,
+            child: Chart(),
+          ),
+        ],
       ),
     );
   }

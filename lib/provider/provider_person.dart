@@ -32,7 +32,6 @@ class PersonProvider extends ChangeNotifier {
     if (personas.isNotEmpty) return;
 
     personNames.forEach((name) {
-      dev.log(name.toString(), name: this.runtimeType.toString());
       personas.add(CustomPersonTile(
           person: _createPerson(name, () {
         _personsDialog(context);
@@ -49,6 +48,7 @@ class PersonProvider extends ChangeNotifier {
 
   _personsDialog(BuildContext context) {
     showDialog(
+      barrierColor: DARKER,
       barrierDismissible: false,
       context: SCAFFOLD_KEY.currentContext,
       builder: (BuildContext context) {

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pandp/globals.dart';
 import 'package:pandp/model/person.dart';
 import 'package:pandp/provider/provider_person.dart';
 import 'package:provider/provider.dart';
@@ -22,10 +23,10 @@ class _CustomPersonTileState extends State<CustomPersonTile> {
       child: FittedBox(
           fit: BoxFit.fitWidth,
           child: Text(widget.person.name.toString().cutName(), style: GoogleFonts.abel(
-              color: Colors.white,
+              color: DIRTY,
               fontSize: double.maxFinite
           ),)),
-      hoverColor: Colors.teal,
+      hoverColor: ACCENT_GREEN,
       onPressed: () {
         Provider.of<PersonProvider>(context, listen: false).person = widget.person;
         widget.person.callback();

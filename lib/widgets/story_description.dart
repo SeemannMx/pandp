@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pandp/globals.dart';
 
 class StoryDescription extends StatelessWidget {
   @override
@@ -25,7 +26,7 @@ class StoryDescription extends StatelessWidget {
         fit:  BoxFit.fill,
         child: Text(text,
             style: GoogleFonts.abel(
-                color: Colors.white,
+                color: DIRTY,
                 fontSize: double.maxFinite
             )
         ),
