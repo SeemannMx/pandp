@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_image.dart';
+import 'package:pandp/provider/provider_location.dart';
 import 'package:pandp/provider/provider_widget.dart';
 import 'package:provider/provider.dart';
 import 'dart:developer' as dev;
@@ -9,63 +10,37 @@ import 'dart:developer' as dev;
 class LocationsGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var locationProvider = Provider.of<LocationProvider>(context, listen: false);
+    var widgetProvider = Provider.of<WidgetProvider>(context, listen: false);
+
     return GridView.count(
         primary: false,
         padding: const EdgeInsets.all(20),
         crossAxisSpacing: 10,
         mainAxisSpacing: 10,
-        crossAxisCount: 3,
-        children: [
+        crossAxisCount: 4,
+        children: _getLoactionsGrid(context)
+    );
+  }
 
-          // todo refactoring
-          OutlineButton(
-            child: Provider.of<CustomImageProvider>(context).locations[0],
-            hoverColor: ACCENT_GREEN,
-            onPressed: () {
-              Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.SIEDLUNG);
-            }
-          ),
+  _getLoactionsGrid(BuildContext context){
+    List<Widget> list = [];
 
-          OutlineButton(
-              child: Provider.of<CustomImageProvider>(context).locations[1],
-              hoverColor: ACCENT_GREEN,
-              onPressed: () {
-                Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NEU_ANFANG);
-              }
-          ),
+    for(int i = 0; i < Provider.of<LocationProvider>(context, listen: false).locationNames.length ; i++){
+      list.add(_getButton(context, i));
+    }
 
-          OutlineButton(
-              child: Provider.of<CustomImageProvider>(context).locations[2],
-              hoverColor: ACCENT_GREEN,
-              onPressed: () {
-                Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NEU_FARMLAND);
-              }
-          ),
+    return list;
+  }
 
-          OutlineButton(
-              child: Provider.of<CustomImageProvider>(context).locations[3],
-              hoverColor: ACCENT_GREEN,
-              onPressed: () {
-                Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.NORD_WALL);
-              }
-          ),
-
-          OutlineButton(
-              child: Provider.of<CustomImageProvider>(context).locations[4],
-              hoverColor: ACCENT_GREEN,
-              onPressed: () {
-                Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.WEST_DEFENSE);
-              }
-          ),
-
-          OutlineButton(
-              child: Provider.of<CustomImageProvider>(context).locations[5],
-              hoverColor: ACCENT_GREEN,
-              onPressed: () {
-                Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.RHIN_HAFEN);
-              }
-          ),
-
-        ]);
+  _getButton(BuildContext context, int index) {
+    return OutlineButton(
+        child: Provider.of<CustomImageProvider>(context).locations[index],
+        hoverColor: ACCENT_GREEN,
+        onPressed: () {
+          Provider.of<LocationProvider>(context, listen: false).buildAssetsPathForLoaction(index);
+          Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.LOCATION);
+        }
+    );
   }
 }

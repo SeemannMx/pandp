@@ -18,6 +18,7 @@ enum DISPLAY {
   STORY,
 
   // Region
+  LOCATION,
   SIEDLUNG,
   NEU_ANFANG,
   NEU_FARMLAND,
@@ -28,7 +29,7 @@ enum DISPLAY {
 
   // Personen
   PERSON,
-  DIALOG
+  // DIALOG
 }
 
 class WidgetProvider extends ChangeNotifier {
@@ -49,8 +50,12 @@ class WidgetProvider extends ChangeNotifier {
       }
       break;
 
-      case DISPLAY.SIEDLUNG: {
+      case DISPLAY.LOCATION: {
         widget = Location();
+      }
+      break;
+      case DISPLAY.SIEDLUNG: {
+        // widget = Location();
       }
       break;
 
