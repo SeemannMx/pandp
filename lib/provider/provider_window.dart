@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as dev;
 
+import 'package:pandp/globals.dart';
+
 class WindowProvider extends ChangeNotifier {
   Size size;
 
@@ -10,7 +12,7 @@ class WindowProvider extends ChangeNotifier {
   var sliderWidth = 3.0;
 
   bool dragColorSwitch = true;
-  Color dragContainerColor = Colors.blueGrey;
+  Color dragContainerColor = ACCENT_GREEN;
 
   Widget dragItem = Icon(Icons.switch_left);
   RenderBox _getBox;
@@ -25,9 +27,9 @@ class WindowProvider extends ChangeNotifier {
 
   hover() {
     if (dragColorSwitch) {
-      dragContainerColor = Colors.pink;
+      dragContainerColor = ACCENT_RED;
     } else {
-      dragContainerColor = Colors.blueGrey;
+      dragContainerColor = ACCENT_GREEN;
     }
     dragColorSwitch = !dragColorSwitch;
     notifyListeners();

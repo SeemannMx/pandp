@@ -15,17 +15,12 @@ class StoryMenu extends StatelessWidget {
       children: [
         Flexible(
           flex: 15,
-          child: Container(
-            child: StoryInfo(),
-          ),
+          child: StoryInfo(),
         ),
 
         Flexible(
           flex: 65,
-          child: Container(
-            color: Colors.black45,
-            child: LocationsGrid(),
-          ),
+          child: LocationsGrid(),
         ),
 
         Flexible(

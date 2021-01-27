@@ -33,7 +33,6 @@ class LocationsGrid extends StatelessWidget {
   _getButton(BuildContext context, int index) {
     return OutlineButton(
         child: Provider.of<CustomImageProvider>(context).locations[index],
-        hoverColor: ACCENT_GREEN,
         onPressed: () {
           Provider.of<LocationProvider>(context, listen: false)
               .buildAssetsPathForLoaction(index);
