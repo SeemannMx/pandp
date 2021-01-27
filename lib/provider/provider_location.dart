@@ -10,18 +10,21 @@ import 'package:pandp/extentions.dart';
 
 class LocationProvider extends ChangeNotifier {
   List<String> locationNames = [
-    'Siedlung',
+    'Siedlung','Neu_Anfang','Neu_Farmland', 'West_Defense', 'Nord_Wall', 'Gates', 'Hafen', 'Strand', 'Wald', 'Berge'
   ];
 
   var location = 'dummy';
   var assetsPath;
 
   LocationProvider(){
+    location = 'Siedlung';
+    location = 'Neu_Anfang';
+
     buildAssetsPathForLoaction();
   }
 
   buildAssetsPathForLoaction() {
-    assetsPath = "assets/$location.md";
+    assetsPath = ("assets/story_location/story_$location.md").toLowerCase();
   }
 }
 
