@@ -1,6 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:pandp/globals.dart';
 import 'dart:developer' as dev;
+
+import 'package:provider/provider.dart';
 
 class CustomImageProvider extends ChangeNotifier {
   List <Widget> images = [];
@@ -24,12 +28,11 @@ class CustomImageProvider extends ChangeNotifier {
       ..add(Image(image: AssetImage('assets/img/wappen_neu_farmland.png')))
       ..add(Image(image: AssetImage('assets/img/wappen_west_defense.png')))
       ..add(Image(image: AssetImage('assets/img/wappen_nord_wall.png')))
-      ..add(Placeholder())
+      ..add(Center(child: Text('Gates', style: GoogleFonts.abel(color: DIRTY))))
       ..add(Image(image: AssetImage('assets/img/wappen_rhin_hafen.png')))
-      ..add(Placeholder())
-      ..add(Placeholder())
-      ..add(Placeholder())
-      ..add(Placeholder())
+      ..add(Center(child: Text('Strand', style: GoogleFonts.abel(color: DIRTY))))
+      ..add(Center(child: Text('Wald', style: GoogleFonts.abel(color: DIRTY))))
+      ..add(Center(child: Text('Berge', style: GoogleFonts.abel(color: DIRTY))))
       ..add(Image(image: AssetImage('assets/img/wappen_spezial_einheit.png')));
   }
 }

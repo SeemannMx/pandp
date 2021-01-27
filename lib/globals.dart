@@ -10,5 +10,5 @@ const Color LIGHT = Colors.blueGrey;
 const Color ACCENT_RED = Colors.pink;
 const Color ACCENT_GREEN = Colors.teal;
 
-const Color DIRTY = Colors.white54;
+const Color DIRTY = Colors.white;
 const Color DARKER = Colors.black87;

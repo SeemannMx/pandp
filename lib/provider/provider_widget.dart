@@ -16,20 +16,9 @@ import 'package:pandp/extentions.dart';
 enum DISPLAY {
   MENU,
   STORY,
-
-  // Region
   LOCATION,
-  SIEDLUNG,
-  NEU_ANFANG,
-  NEU_FARMLAND,
-  NORD_WALL,
-  WEST_DEFENSE,
-  RHIN_HAFEN,
   SPEZIAL,
-
-  // Personen
   PERSON,
-  // DIALOG
 }
 
 class WidgetProvider extends ChangeNotifier {
@@ -52,35 +41,6 @@ class WidgetProvider extends ChangeNotifier {
 
       case DISPLAY.LOCATION: {
         widget = Location();
-      }
-      break;
-      case DISPLAY.SIEDLUNG: {
-        // widget = Location();
-      }
-      break;
-
-      case DISPLAY.NEU_ANFANG: {
-        widget = _test();
-      }
-      break;
-
-      case DISPLAY.NEU_FARMLAND: {
-        widget = _test();
-      }
-      break;
-
-      case DISPLAY.WEST_DEFENSE: {
-        widget = _test();
-      }
-      break;
-
-      case DISPLAY.NORD_WALL: {
-        widget = _test();
-      }
-      break;
-
-      case DISPLAY.RHIN_HAFEN: {
-        widget = _test();
       }
       break;
 

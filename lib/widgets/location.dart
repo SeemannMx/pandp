@@ -11,40 +11,34 @@ import 'package:provider/provider.dart';
 class Location extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // var size = MediaQuery.of(context).size;
+
+    print('build');
 
     return Column(
       children: [
         Flexible(
           flex: 10,
-          child: Container(
-            child: IconButton(
-              color: ACCENT_RED,
-              icon: Icon(Icons.clear),
-              onPressed: () {
-                Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.MENU);
-              },
-            ),
+          child: IconButton(
+            color: ACCENT_RED,
+            icon: Icon(Icons.clear),
+            onPressed: () {
+              Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.MENU);
+            },
           ),
         ),
         Flexible(
           flex: 90,
-          child: Container(
-              child: FutureBuilder(
-                  future: rootBundle
-                      .loadString(Provider.of<LocationProvider>(context).assetsPath),
-                  builder:
-                      (BuildContext context, AsyncSnapshot<String> snapshot) {
-                    if (snapshot.hasError) return Dummy();
+          child: FutureBuilder(
+              future: rootBundle
+                  .loadString(Provider.of<LocationProvider>(context).assetsPath),
+              builder:
+                  (BuildContext context, AsyncSnapshot<String> snapshot) {
+                if (snapshot.hasError) return Dummy();
 
-                    return Container(
-                      // height: size.height / 1.5,
-                      // width: size.width / 2,
-                      child: (snapshot.hasData)
-                          ? Markdown(data: snapshot.data)
-                          : Center(child: CircularProgressIndicator()),
-                    );
-                  })),
+                return (snapshot.hasData)
+                    ? Markdown(data: snapshot.data)
+                    : Center(child: CircularProgressIndicator());
+              }),
         ),
       ],
     );
