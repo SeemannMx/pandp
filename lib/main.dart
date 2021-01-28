@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pandp/home.dart';
 import 'package:pandp/provider/provider_clock.dart';
+import 'package:pandp/provider/provider_dice.dart';
 import 'package:pandp/provider/provider_image.dart';
 import 'package:pandp/provider/provider_location.dart';
 import 'package:pandp/provider/provider_person.dart';
@@ -21,6 +22,7 @@ class PandP extends StatelessWidget {
       ChangeNotifierProvider(create: (_) => WidgetProvider()),
       ChangeNotifierProvider(create: (_) => PersonProvider()),
       ChangeNotifierProvider(create: (_) => LocationProvider()),
+      ChangeNotifierProvider(create: (_) => DiceProvider()),
     ], child: MaterialApp(title: 'PandP', home: Home()));
   }
 }
