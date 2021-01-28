@@ -2,11 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/globals.dart';
+import 'package:pandp/extentions.dart';
 import 'dart:developer' as dev;
 
 import 'package:provider/provider.dart';
 
 class CustomImageProvider extends ChangeNotifier {
+
   List<Widget> images = [];
   List<Widget> locations = [];
 
@@ -17,18 +19,39 @@ class CustomImageProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  Widget _getImageTile(String path){
+    return Stack(
+      children: [
+        Image(image: AssetImage(path)),
+        Container(
+            decoration: BoxDecoration(
+                gradient: LinearGradient(
+                    begin: Alignment.centerLeft,
+                    end: Alignment.centerRight,
+                    colors: [DARK , LIGHT])),
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.only(left: 20),
+            child: Text(path.cutPath(),
+                style: GoogleFonts.abel(
+                  fontSize: 20,
+                    color: DIRTY))
+        )
+      ],
+    );
+  }
+
   _addChart() {
     images
-      ..add(Image(image: AssetImage('assets/img/chart.png')))
-      ..add(Image(image: AssetImage('assets/img/img_neu_anfang.png')))
-      ..add(Image(image: AssetImage('assets/img/img_neu_anfang_invade.png')))
-      ..add(Image(image: AssetImage('assets/img/img_neu_farmland.png')))
-      ..add(Image(image: AssetImage('assets/img/img_neu_farmland_fields.png')))
-      ..add(Image(image: AssetImage('assets/img/img_nord_wall.png')))
-      ..add(Image(image: AssetImage('assets/img/img_west_defense.png')))
-      ..add(Image(image: AssetImage('assets/img/img_hafen.png')))
-      ..add(Image(image: AssetImage('assets/img/img_berge.png')))
-      ..add(Image(image: AssetImage('assets/img/img_wood_cabin.png')));
+      ..add(_getImageTile('assets/img/chart.png'))
+      ..add(_getImageTile('assets/img/img_neu_anfang.png'))
+      ..add(_getImageTile('assets/img/img_neu_anfang_invade.png'))
+      ..add(_getImageTile('assets/img/img_neu_farmland.png'))
+      ..add(_getImageTile('assets/img/img_neu_farmland_fields.png'))
+      ..add(_getImageTile('assets/img/img_nord_wall.png'))
+      ..add(_getImageTile('assets/img/img_west_defense.png'))
+      ..add(_getImageTile('assets/img/img_hafen.png'))
+      ..add(_getImageTile('assets/img/img_berge.png'))
+      ..add(_getImageTile('assets/img/img_wood_cabin.png'));
   }
 
   _addLocations() {

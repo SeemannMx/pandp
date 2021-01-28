@@ -9,11 +9,13 @@ class Chart extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<CustomImageProvider>(
         builder: (context, imageProvider, child) {
-
       return ListView.builder(
           itemCount: imageProvider.images.length,
           itemBuilder: (BuildContext context, int index) {
-            return Center(child: imageProvider.images[index]);
+            return Padding(
+              padding: const EdgeInsets.only(bottom: 20),
+              child: Center(child: imageProvider.images[index]),
+            );
           });
     });
   }
