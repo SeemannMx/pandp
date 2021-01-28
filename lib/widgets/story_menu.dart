@@ -14,21 +14,20 @@ class StoryMenu extends StatelessWidget {
     return Column(
       children: [
         Flexible(
-          flex: 15,
+          flex: 10,
           child: StoryInfo(),
         ),
 
         Flexible(
-          flex: 65,
+          flex: 80,
           child: LocationsGrid(),
         ),
 
         Flexible(
-          flex: 20,
+          flex: 10,
           fit: FlexFit.tight,
           child: Container(
             width: double.maxFinite,
-            padding: EdgeInsets.symmetric(vertical: 10),
             child: MaterialButton(
               color: DARK,
               hoverColor: ACCENT_GREEN,

@@ -12,9 +12,6 @@ class StoryInfo extends StatelessWidget {
     return Consumer<WidgetProvider>(builder: (context, widgetProvider, child) {
       return Container(
         width: double.maxFinite,
-
-        // todo padding fix dimension
-        padding: EdgeInsets.symmetric(vertical: 10),
         child: MaterialButton(
           color: DARK,
           hoverColor: ACCENT_GREEN,

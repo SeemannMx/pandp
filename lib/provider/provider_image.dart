@@ -23,7 +23,7 @@ class CustomImageProvider extends ChangeNotifier {
       ..add(Image(image: AssetImage('assets/img/img_neu_anfang.png')))
       ..add(Image(image: AssetImage('assets/img/img_neu_anfang_invade.png')))
       ..add(Image(image: AssetImage('assets/img/img_neu_farmland.png')))
-      ..add(Image(image: AssetImage('assets/img/img_neu_farmland_I.png')))
+      ..add(Image(image: AssetImage('assets/img/img_neu_farmland_fields.png')))
       ..add(Image(image: AssetImage('assets/img/img_nord_wall.png')))
       ..add(Image(image: AssetImage('assets/img/img_west_defense.png')))
       ..add(Image(image: AssetImage('assets/img/img_hafen.png')))
