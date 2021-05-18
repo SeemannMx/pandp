@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_dice.dart';
 import 'package:provider/provider.dart';
@@ -23,14 +22,14 @@ class Dice extends StatelessWidget {
                 onPressed: () {
                   diceProvider.roll();
                 },
-                child: Text('dice', style: GoogleFonts.abel(color: DIRTY, fontSize: fontsize)),
+                child: Text('dice', style: TextStyle(color: DIRTY, fontSize: fontsize)),
               ),
-            )
-        ),
+            )),
         Flexible(
-            flex: 65,
-            fit: FlexFit.tight,
-            child: SizedBox.expand(child: Center(child: Text(diceProvider.result, style: GoogleFonts.abel(color: DARK, fontSize: fontsize)))),
+          flex: 65,
+          fit: FlexFit.tight,
+          child: SizedBox.expand(
+              child: Center(child: Text(diceProvider.result, style: TextStyle(color: DARK, fontSize: fontsize)))),
         ),
       ],
     );

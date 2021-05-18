@@ -6,7 +6,6 @@ import 'package:pandp/provider/provider_widget.dart';
 import 'package:provider/provider.dart';
 
 class Personas extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     Provider.of<PersonProvider>(context, listen: false).initPersons(context);
@@ -20,8 +19,7 @@ class Personas extends StatelessWidget {
               color: ACCENT_RED,
               icon: Icon(Icons.clear),
               onPressed: () {
-                Provider.of<WidgetProvider>(context, listen: false)
-                    .show(DISPLAY.MENU);
+                Provider.of<WidgetProvider>(context, listen: false).show(DISPLAY.MENU);
               },
             ),
           ),
@@ -29,14 +27,14 @@ class Personas extends StatelessWidget {
         Flexible(
           flex: 90,
           child: Container(
-              child: GridView.count(
-            primary: false,
-            padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            crossAxisCount: 5,
-            children: Provider.of<PersonProvider>(context, listen: false).personas
-          )),
+            child: GridView.count(
+                primary: false,
+                padding: const EdgeInsets.all(20),
+                crossAxisSpacing: 10,
+                mainAxisSpacing: 10,
+                crossAxisCount: 5,
+                children: Provider.of<PersonProvider>(context, listen: false).personas),
+          ),
         ),
       ],
     );

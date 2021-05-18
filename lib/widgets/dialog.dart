@@ -2,15 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:intl/intl.dart';
+import 'package:pandp/extentions.dart';
 import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_person.dart';
-import 'package:pandp/provider/provider_widget.dart';
 import 'package:pandp/widgets/dummy.dart';
 import 'package:provider/provider.dart';
-import 'package:pandp/extentions.dart';
-import 'dart:developer' as dev;
 
 class CustomDialog extends StatelessWidget {
   @override
@@ -30,9 +26,7 @@ class CustomDialog extends StatelessWidget {
             return Container(
               height: size.height / 1.5,
               width: size.width / 2,
-              child: (snapshot.hasData)
-                  ? Markdown(data: snapshot.data)
-                  : Center(child: CircularProgressIndicator()),
+              child: (snapshot.hasData) ? Markdown(data: snapshot.data) : Center(child: CircularProgressIndicator()),
             );
           }),
       actions: <Widget>[

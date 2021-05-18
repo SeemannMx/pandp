@@ -14,7 +14,7 @@ dependencies:
   enum_to_string: ^1.0.14
   provider: ^4.3.3
   flutter_markdown: any
-  google_fonts: ^1.1.1
+  google_fonts: any
   intl: ^0.16.1
 
 dev_dependencies:

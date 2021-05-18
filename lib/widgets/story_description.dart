@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:pandp/globals.dart';
 
 class StoryDescription extends StatelessWidget {
@@ -23,13 +22,8 @@ class StoryDescription extends StatelessWidget {
   _getText(String text) {
     return Container(
       child: FittedBox(
-        fit:  BoxFit.fill,
-        child: Text(text,
-            style: GoogleFonts.abel(
-                color: DIRTY,
-                fontSize: double.maxFinite
-            )
-        ),
+        fit: BoxFit.fill,
+        child: Text(text, style: TextStyle(color: DIRTY, fontSize: double.maxFinite)),
       ),
     );
   }

@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class Dummy extends StatelessWidget {
   @override
@@ -13,7 +11,7 @@ class Dummy extends StatelessWidget {
         width: size.width / 2,
         child: Center(
             child: Text('no data found',
-                style: GoogleFonts.abel(
+                style: TextStyle(
                   color: Colors.black54,
                 ))));
   }

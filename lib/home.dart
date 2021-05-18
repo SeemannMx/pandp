@@ -6,7 +6,6 @@ import 'package:pandp/provider/provider_window.dart';
 import 'package:pandp/widgets/chart.dart';
 import 'package:pandp/widgets/control.dart';
 import 'package:provider/provider.dart';
-import 'dart:developer' as dev;
 
 class Home extends StatelessWidget {
   static String route = '/home';
@@ -38,10 +37,7 @@ class Home extends StatelessWidget {
       flex: Provider.of<WindowProvider>(context).flexLeft,
       child: Column(
         children: [
-          Flexible(
-            flex: 10,
-            child: Control()
-          ),
+          Flexible(flex: 10, child: Control()),
           Flexible(
             flex: 90,
             child: Chart(),
@@ -55,20 +51,17 @@ class Home extends StatelessWidget {
     WindowProvider windowProvider = Provider.of<WindowProvider>(context);
 
     return GestureDetector(
-        onHorizontalDragUpdate: (DragUpdateDetails dragUpdate) =>
-            windowProvider.update(context, dragUpdate),
+        onHorizontalDragUpdate: (DragUpdateDetails dragUpdate) => windowProvider.update(context, dragUpdate),
         child: MouseRegion(
-          child: Container(
-              width: windowProvider.sliderWidth,
-              color: windowProvider.dragContainerColor),
+          child: Container(width: windowProvider.sliderWidth, color: windowProvider.dragContainerColor),
           onHover: (e) => windowProvider.hover(),
         ));
   }
 
   _right(BuildContext context) {
     return Flexible(
-        flex: Provider.of<WindowProvider>(context).flexRight,
-        child: Provider.of<WidgetProvider>(context).widget,
+      flex: Provider.of<WindowProvider>(context).flexRight,
+      child: Provider.of<WidgetProvider>(context).widget,
     );
   }
 }
