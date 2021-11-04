@@ -5,7 +5,7 @@ Rhin-Hafen, unabhängiger Handelspartner auch Rhin Offensive genannt
 
 .
 ## Gebäude
-Hafen, Pier, Lager, Kontor, Werft
+Hafen, Pier, Lager, Kontor, Werft, Hospital, Verwaltung, Versammlungshalle, Marktplatz, Wohnhäuser, Wachtürme, Befestigungszaun.
 
 .
 ## Gegenstände

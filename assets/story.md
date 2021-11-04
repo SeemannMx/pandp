@@ -123,7 +123,9 @@ Nachdem Dr. Vanessa Herbst erfahren hat das es imune Menschen zugeben scheint, b
 + Wächter // Infizierten Transport
 
 Assistenten und Wächter haben kein Detailwissen, sind aber an die Geheimhaltung gebunden. Beide Gruppen kennen ihre Abläufe und können in eine Richtung weisen. Es existieren keine Unterlagen ausser der Forschungsberichte im Zweit-Labor. 
-Wachstum. Auf drängen von Hugo wurde versucht das Hafengebiet vorübergehende zu destabilisieren. Ziel dieser Anstrengung war die Verbesserung der Nahrungsversorgung für die Siedlung. Hugos Meinung nach ist die Verteidigung des Hafens nicht ausreichend von Aegir geplant und wirkt sich dabei auch auf die Sicherheit der Siedlung aus. Leider war Aegir-son nicht Einsichtig was die Verbesserung der Verteidigungsstrategie angeht. Daher beschlossen die Gründer mit Zustimmung der Räte die annexion des Hafens. Die Übernahme sollte ohne Opfer durchgeführt werden, dementsprechend wurde versucht Aegir zu entführen. Die Entführung sollte den Bewohnern des Hafens verdeutlichen wie unsicher dieses Gebiet ist. Mit der Unterstützung der Bewohner wäre es vielleicht möglich Aegir-son zu überzeugen und gemeinsam ein besseres Sicherheitskonzept aufzubauen. Die Entführung schlug fehl und Aegir-son tötete alle Angreifer. Leider wurde Aegirs Frau und Kinder während dessen schwer verletzt. Alle Bemühungen von Gunnar (Aegirs Vertreter) Aegir zu beruhigen waren erfolglos. Rasend vor Wut machte sich Aegir auf den Weg in die Siedlung um sich zu rächen und Hugo zur Rede zustellen. Den Plan den Aegir verfolgt ist, der Überfall von Neu-Anfang durch eine Horde von Infizierten. Er werde durch das Randgebiet wandern und Infizierte in Richtung Neu-Anfang treiben. Zufällig begegnete Aegir weit entfernt am nördlichen Strand einer Horde die in Richtung Süden wanderte. Im Bereich des Hafen-Gebiets wissen folgenden Personen über die Entführung bescheid:
+
+### Wachstum
+Auf drängen von Hugo wurde versucht das Hafengebiet vorübergehende zu destabilisieren. Ziel dieser Anstrengung war die Verbesserung der Nahrungsversorgung für die Siedlung. Hugos Meinung nach ist die Verteidigung des Hafens nicht ausreichend von Aegir-son geplant und wirkt sich dabei auch auf die Sicherheit der Siedlung aus. Leider war Aegir-son nicht Einsichtig was die Verbesserung der Verteidigungsstrategie angeht. Daher beschlossen die Gründer mit Zustimmung der Räte die Annexion des Hafens. Die Übernahme sollte ohne Opfer durchgeführt werden, dementsprechend wurde versucht Aegir-son zu entführen. Die Entführung sollte den Bewohnern des Hafens verdeutlichen wie unsicher dieses Gebiet ist. Mit der Unterstützung der Bewohner wäre es vielleicht möglich Aegir-son zu überzeugen und gemeinsam ein besseres Sicherheitskonzept aufzubauen. Die Entführung schlug fehl und Aegir-son tötete alle Angreifer. Leider wurde Aegirs Frau und Kinder während dessen schwer verletzt. Alle Bemühungen von Gunnar (Aegirs Vertreter) Aegir zu beruhigen waren erfolglos. Rasend vor Wut machte sich Aegir auf den Weg in die Siedlung um sich zu rächen und Hugo zur Rede zustellen. Aegirs Plan ist, der Überfall von Neu-Anfang durch eine Horde von Infizierten. Er werde durch das Randgebiet wandern und Infizierte in Richtung Neu-Anfang treiben. Zufällig begegnete Aegir weit entfernt am nördlichen Strand einer Horde die in Richtung Süden wanderte, welche er in Richtung Neu-Anfang führte. Im Bereich des Hafen-Gebiets wissen folgenden Personen über die Entführung bescheid:
 
 *Hafen*		
 + Aegir				
@@ -137,13 +139,13 @@ Wachstum. Auf drängen von Hugo wurde versucht das Hafengebiet vorübergehende z
 + Schutzstaffel Alpha
 
 #### Ausbildung
-Jeder neue Siedler der an den Mauern der Siedlung lebend ankommt durchläuft eine Prüfung und anschließend eine Ausbildung. Wobei das Hauptziel der Prüfung die Charakterlicher Eignung für die Siedlung aufzeigen soll. Die Prüfung läuft parallel zur Ausbildung der Siedler. Die Ausbildung läuft ca. drei Monate, wobei die Dauer den neuen Siedlern nicht bekannt ist. Im Laufe der Ausbildung wird jeder Siedler mit drei Situationen konfrontiert die Aufschluss über seinen:ihren Charakter gibt. Wenn ein Siedler zwei von drei Prüfungen besteht darf er ein Siedlungsgebiet und eine Aufgabe wählen. Zusätzlich wird er:sie von der Gemeinschaft mit allen nötigen Ressourcen versorgt bzw. teilt seine Ressourcen mit der Gemeinschaft. Wenn ein Siedler diese Anforderung nicht erfüllt entscheiden die Gründer über den weiteren Verlauf. 
+Jeder neue Siedler der an den Mauern der Siedlung lebend ankommt durchläuft eine Prüfung und anschließend eine Ausbildung. Wobei das Hauptziel der Prüfung die Charakterlicher Eignung für die Siedlung aufzeigen soll. Die Prüfung läuft parallel zur Ausbildung der Siedler. Die Ausbildung läuft ca. drei Monate, wobei die Dauer den neuen Siedlern nicht bekannt ist. Im Laufe der Ausbildung wird jeder Siedler mit drei Situationen konfrontiert die Aufschluss über seinen:ihren Charakter gibt. Wenn ein Siedler zwei von drei Prüfungen besteht darf er ein Siedlungsgebiet und eine Aufgabe wählen(Siedlerprüfung != Wächterprüfung). Zusätzlich wird er:sie von der Gemeinschaft mit allen nötigen Ressourcen versorgt bzw. teilt seine Ressourcen mit der Gemeinschaft. Wenn ein Siedler diese Anforderung nicht erfüllt entscheiden die Gründer über den weiteren Verlauf. 
 
 + Charaktertest		// der Anwärter wird einer Stresssituation ausgesetzt
 + Ehrlichkeitstest	// dem Anwärter wird ein Geheimnis anvertraut
 + Vertrauenstest	// dem Anwärter wird Verantwortung übergeben
 
-Mögliche Konsequenzen sind Exil oder Tod je nach Entscheidung der Gründer. Bzw. Bewährung durch Sondermission Die Ausbildung umfasst alles mögliche aus dem Bereich Handwerk, Landwirtschaft, Metal- , Textil- und Steinverarbeitung. Je nach Qualifikation werden die Anwärter weiter- oder ausgebildet. Das Kampf- und Strategie Training aller Bewohner ist elementarer Bestandteil der Verteidigung Strategie der gesamten Siedlung. Im Bereich von West-Defense wissen folgenden Personen über die Art und Weise der Ausbildung bescheid:
+Mögliche Konsequenzen sind Exil oder Tod je nach Entscheidung der Gründe bzw. Bewährung durch eine Sondermission. Die Ausbildung umfasst alles mögliche aus dem Bereich Handwerk, Landwirtschaft, Metal- , Textil- und Steinverarbeitung. Je nach Qualifikation werden die Anwärter fort- oder ausgebildet. Das Kampf- und Strategie Training aller Bewohner ist elementarer Bestandteil der Verteidigung Strategie der gesamten Siedlung. Im Bereich von West-Defense wissen folgenden Personen über die Art und Weise der Ausbildung bescheid:
 
 + Alpha			
 + Gründer
@@ -161,10 +163,10 @@ Eine Anweisung, Informationen und Fortschritt zum Testverfahren werden von den A
 ## Personen & Rollen
 
 ### Siedlung
-+ Hugo // Unbekannt
-+ Dr. Vanessa Herbst // Doktorin der Biologie
-+ Giovanni di Martino // Stimme der Verwalter -  Ex-Buchhalter
-+ Frederik von Moltke // Stimme der Wächter - Ex-Soldat 
++ Gründer - Hugo // Unbekannt
++ Gründer - Dr. Vanessa Herbst // Doktorin der Biologie
++ Gründer - Giovanni di Martino // Stimme der Verwalter -  Ex-Buchhalter
++ Gründer - Frederik von Moltke // Stimme der Wächter - Ex-Soldat 
 + Vorsitzender  Wächterrat // Ist an alle Entscheidungen beteiligt
 + Vorsitzender  Verwaltungsrat // Ist an alle Entscheidungen beteiligt
 + Sonderbeauftragter der Gründer // Verantwortlich für WE/WA am Nord-Wall

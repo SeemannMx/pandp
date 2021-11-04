@@ -5,7 +5,7 @@ Militär, Bildung, Forschung und Entwicklung
 
 .
 ## Gebäude
-Wohnhäuser, Trainingsgelände, Sportplätze, Ställe, Lager, Schulen, Projekt Gelände, Truppenübungsplatz, Labor
+Wohnhäuser, Trainingsgelände, Sportplätze, Ställe, Lager, Schulen, Projekt Gelände, Truppenübungsplatz, Labor, Kaserne, Silos
 
 .
 ## Gegenstände

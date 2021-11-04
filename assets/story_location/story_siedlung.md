@@ -13,7 +13,7 @@ Altstadt - sehr gut gesichert
 
 .
 ### Gebäude
-Schutzbunker, Waffenlager, Vorräte, Medizin, Gründer Wohnhäuser, Wächter  Wohnhäuser, Allg. Lager, Versammlungshalle, Labor, Versammlungsplatz, Werkstatt, Waisenhaus, Silos    
+Schutzbunker, Waffenlager, Vorräte, Medizin, Gründer Wohnhäuser, Wächter  Wohnhäuser, Allg. Lager, Versammlungshalle, Labor, Versammlungsplatz, Werkstatt, Waisenhaus, Silos, Bibliothek    
 
 .
 ### Gegenstände   

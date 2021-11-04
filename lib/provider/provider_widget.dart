@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pandp/provider/provider_person.dart';
+import 'package:pandp/widgets/chapter.dart';
 import 'package:pandp/widgets/dialog.dart';
 import 'package:pandp/widgets/location.dart';
 import 'dart:developer' as dev;
@@ -16,48 +17,58 @@ import 'package:pandp/extentions.dart';
 enum DISPLAY {
   MENU,
   STORY,
+  CHAPTER,
   LOCATION,
   SPEZIAL,
   PERSON,
 }
 
 class WidgetProvider extends ChangeNotifier {
-
   Widget widget = StoryMenu();
   bool isDisplayed = false;
 
-  show(DISPLAY type){
+  show(DISPLAY type) {
+    switch (type) {
+      case DISPLAY.MENU:
+        {
+          widget = StoryMenu();
+        }
+        break;
 
-    switch(type) {
-      case DISPLAY.MENU: {
-        widget = StoryMenu();
-      }
-      break;
+      case DISPLAY.STORY:
+        {
+          widget = Story();
+        }
+        break;
 
-      case DISPLAY.STORY: {
-        widget = Story();
-      }
-      break;
+      case DISPLAY.CHAPTER:
+        {
+          widget = Chapter();
+        }
+        break;
 
-      case DISPLAY.LOCATION: {
-        widget = Location();
-      }
-      break;
+      case DISPLAY.LOCATION:
+        {
+          widget = Location();
+        }
+        break;
 
-      case DISPLAY.SPEZIAL: {
-        widget = _test();
-      }
-      break;
+      case DISPLAY.SPEZIAL:
+        {
+          widget = _test();
+        }
+        break;
 
-      case DISPLAY.PERSON: {
-        widget = Personas();
-      }
-      break;
+      case DISPLAY.PERSON:
+        {
+          widget = Personas();
+        }
+        break;
     }
     notifyListeners();
   }
 
-  Widget _test(){
+  Widget _test() {
     return Column(
       children: [
         Flexible(
@@ -82,4 +93,3 @@ class WidgetProvider extends ChangeNotifier {
     );
   }
 }
-

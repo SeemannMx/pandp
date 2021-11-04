@@ -31,3 +31,4 @@ flutter:
     - assets/story_person/
     - assets/story_location/
     - assets/img/
+    - assets/chapter.md

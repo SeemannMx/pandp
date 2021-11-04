@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pandp/globals.dart';
 import 'package:pandp/provider/provider_widget.dart';
+import 'package:pandp/widgets/chapter_info.dart';
 import 'package:pandp/widgets/location_grid.dart';
 import 'package:pandp/widgets/story_info.dart';
 import 'package:provider/provider.dart';
@@ -12,9 +13,19 @@ class StoryMenu extends StatelessWidget {
     return Column(
       children: [
         Flexible(
-          flex: 10,
-          child: StoryInfo(),
-        ),
+            flex: 10,
+            child: Row(
+              children: [
+                Flexible(
+                  flex: 50,
+                  child: StoryInfo(),
+                ),
+                Flexible(
+                  flex: 50,
+                  child: ChapterInfo(),
+                ),
+              ],
+            )),
         Flexible(
           flex: 80,
           child: LocationsGrid(),
